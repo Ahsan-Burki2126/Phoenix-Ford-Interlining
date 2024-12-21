@@ -1,0 +1,151 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+:root {
+  --phoneixBlue: #2184c2;
+  --phoneixGolden: #ceba8b;
+  --phoneixcream: #f5e9cf;
+  --neutral: #262626;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", serif;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: var(--phoneixcream);
+  color: var(--neutral);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo-img {
+  height: 70px;
+  margin-right: 10px;
+}
+
+.logo-text {
+  text-align: center;
+  font-size: 14px;
+}
+
+.nav-links {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 3rem;
+  flex: 0.8;
+  /* border: 2px solid black; */
+}
+
+.nav-links a {
+  position: relative;
+  color: var(--neutral);
+  text-decoration: none;
+  margin-left: 20px;
+  transition: all 0.5s;
+  font-weight: 400;
+  font-size: 1rem;
+  padding-bottom: 5px;
+}
+
+.nav-links a::before {
+  content: "";
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  width: 0;
+  height: 3px;
+  background-color: var(--phoneixBlue);
+  transition: width 0.3s;
+}
+
+.nav-links a:hover::before,
+.nav-links a:focus::before,
+.nav-links a:active::before {
+  width: 100%;
+}
+
+.mobile-menu-icon {
+  display: none;
+  cursor: pointer;
+  font-size: 1.5rem;
+}
+
+.mobile-nav {
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 250px;
+  max-width: 100%;
+  background-color: var(--phoneixcream);
+  padding: 20px;
+  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
+  transform: translateX(100%);
+  transition: transform 0.3s ease;
+}
+
+.mobile-nav a {
+  display: block;
+  position: relative;
+  color: var(--neutral);
+  text-decoration: none;
+  margin: 15px 0;
+  transition: all 0.9s;
+  font-weight: 400;
+  font-size: 1rem;
+}
+
+.mobile-nav a::before {
+  content: "";
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  width: 0;
+  height: 3px;
+  background-color: var(--phoneixBlue);
+  transition: width 0.5s;
+}
+
+.mobile-nav a:hover::before,
+.mobile-nav a:focus::before,
+.mobile-nav a:active::before {
+  width: 100%;
+}
+
+.mobile-nav .close-btn {
+  font-size: 3rem;
+  color: var(--neutral);
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    justify-content: space-between;
+  }
+  .logo-text {
+    display: none;
+  }
+  .nav-links {
+    display: none;
+  }
+  .mobile-menu-icon {
+    display: block;
+  }
+  .mobile-nav {
+    display: block;
+  }
+}
