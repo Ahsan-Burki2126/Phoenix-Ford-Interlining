@@ -56,3 +56,19 @@ nextBtn.addEventListener("click", () => {
 });
 
 showSlide(currentIndex);
+
+// tabs and products section
+const tabs = document.querySelectorAll(".tab");
+const galleries = document.querySelectorAll(".gallery");
+
+tabs.forEach((tab) => {
+  tab.addEventListener("click", () => {
+    const tabId = tab.dataset.tab;
+
+    tabs.forEach((t) => t.classList.remove("active"));
+    galleries.forEach((g) => g.classList.remove("active"));
+
+    tab.classList.add("active");
+    document.getElementById(`gallery-${tabId}`).classList.add("active");
+  });
+});
