@@ -12,6 +12,10 @@
   font-family: "Montserrat", serif;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 /* universal classes  */
 .section-title {
   font-size: 2.5rem;
@@ -362,6 +366,162 @@ body {
 
 .gallery-item:hover .overlay {
   opacity: 1;
+}
+
+/* services section */
+.services-section {
+  text-align: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+.services-section p {
+  font-size: 1rem;
+  margin-bottom: 30px;
+  color: #555;
+}
+
+.services-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  justify-content: center; /* Ensures alignment for smaller screens */
+  align-items: center; /* Centers the items vertically if needed */
+  padding: 20px; /* Adds padding for better spacing on small screens */
+}
+
+.service-card {
+  background: var(--phoneixcream);
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+  height: 350px; /* Fixed height */
+  width: 100%; /* Width adapts to grid column size */
+  display: flex; /* Centers content vertically */
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.service-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.service-card i {
+  font-size: 3rem;
+  color: var(--phoneixBlue);
+  margin-bottom: 15px;
+}
+
+.service-card h3 {
+  font-size: 1.5rem;
+  margin: 10px 0;
+  position: relative;
+  color: var(--neutral);
+}
+
+.service-card h3::after {
+  content: "";
+  display: block;
+  width: 50px;
+  height: 3px;
+  background: var(--phoneixBlue);
+  margin: 5px auto;
+}
+
+.service-card p {
+  font-size: 0.9rem;
+  color: #777;
+  margin: 15px 0;
+}
+
+.service-card a {
+  display: inline-block;
+  text-decoration: none;
+  padding: 10px 20px;
+  background: var(--phoneixBlue);
+  color: #fff;
+  border-radius: 5px;
+  transition: background 0.3s ease;
+}
+
+.service-card a:hover {
+  background: var(--phoneixGolden);
+}
+
+/* footer section  */
+
+.footer {
+  background-color: #f5e9cf; /* Phoenix Cream */
+  padding: 40px 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.footer-column {
+  flex: 1 1 300px;
+  max-width: 300px;
+}
+
+.quick-links {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.2em;
+}
+
+.footer h3 {
+  font-size: 1.5rem;
+  color: #2184c2; /* Phoenix Blue */
+  margin-bottom: 10px;
+}
+
+.footer p,
+.footer a {
+  font-size: 1rem;
+  color: #262626; /* Dark Gray */
+  margin-bottom: 8px;
+  text-decoration: none;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+
+.footer .social-icons {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.footer .social-icons a {
+  font-size: 1.5rem;
+  color: #2184c2; /* Phoenix Blue */
+  transition: color 0.3s ease;
+}
+
+.footer .social-icons a:hover {
+  color: #262626; /* Dark Gray */
+}
+
+.footer-bottom {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 1rem 0;
+  /* margin-top: 20px; */
+  background-color: var(--phoneixGolden);
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--phoneixBlue);
 }
 
 /* Responsive Styles */
