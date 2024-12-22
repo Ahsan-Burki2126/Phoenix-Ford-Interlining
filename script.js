@@ -15,7 +15,7 @@ closeNavBtn.addEventListener("click", () => {
 const slides = document.querySelectorAll(".slide");
 const titles = [
   "State-of-Art Manufacturing Units",
-  "Strict Quality COntrols",
+  "Strict Quality Controls",
   "World Wide delieveries to doorstep",
   "Consultation on interlining applications",
 ];
