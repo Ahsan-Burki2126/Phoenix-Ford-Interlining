@@ -274,6 +274,7 @@ body {
 }
 
 /* tabs and products */
+
 .products-section {
   padding: 20px;
   max-width: 1200px;
@@ -324,7 +325,8 @@ body {
   position: relative;
   overflow: hidden;
   border-radius: 10px;
-  width: 300px;
+  width: 100%; /* Adjusted for responsiveness */
+  max-width: 300px; /* Prevent excessive stretching */
   height: 200px;
   margin: auto;
 }
@@ -360,6 +362,57 @@ body {
 .gallery-item:hover .overlay {
   opacity: 1;
 }
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+  .gallery {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns for medium screens */
+    gap: 15px;
+  }
+
+  .products-title {
+    font-size: 1.75rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .gallery {
+    grid-template-columns: 1fr; /* 1 column for small screens */
+    gap: 10px;
+  }
+
+  .tabs-container {
+    gap: 5px;
+  }
+
+  .tab {
+    padding: 8px 12px;
+    font-size: 0.9rem;
+  }
+
+  .products-title {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .products-section {
+    padding: 10px;
+  }
+
+  .gallery {
+    gap: 5px;
+  }
+
+  .gallery-item {
+    height: 150px;
+  }
+
+  .products-title {
+    font-size: 1.25rem;
+  }
+}
+
 @media (max-width: 768px) {
   .navbar {
     justify-content: space-between;
