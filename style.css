@@ -169,10 +169,10 @@ body {
 .hero-title {
   position: absolute;
   z-index: 2;
-  color: white;
+  color: var(--phoneixcream);
   padding: 2% 4%;
   border-radius: 12%;
-  background-color: rgba(0, 0, 0, 0.493);
+  background-color: var(--phoneixBlue);
   font-size: 3rem;
   text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
   text-align: center;
@@ -199,8 +199,8 @@ body {
 }
 
 .control-btn {
-  background-color: rgba(0, 0, 0, 0.5);
-  color: white;
+  background-color: var(--phoneixBlue);
+  color: var(--phoneixcream);
   border: none;
   padding: 10px 20px;
   cursor: pointer;
@@ -216,6 +216,50 @@ body {
 
 .control-btn:focus {
   outline: none;
+}
+
+/* about us section  */
+
+.about-us {
+  padding: 50px 20px;
+  text-align: center;
+  background-color: var(--light-gray);
+}
+
+.about-us h2 {
+  font-size: 2.5rem;
+  display: inline-block;
+  margin-bottom: 30px;
+  color: var(--phoneixBlue);
+  font-weight: 300;
+  border-bottom: 4px solid var(--phoneixGolden);
+}
+
+.about-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+}
+
+.about-image img {
+  width: 100%;
+  max-width: 500px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.about-text {
+  max-width: 600px;
+  text-align: justify;
+}
+
+.about-text p {
+  font-size: 1.2rem;
+  line-height: 1.6;
 }
 
 @media (max-width: 768px) {
@@ -241,5 +285,18 @@ body {
   }
   .control-btn {
     display: none;
+  }
+  /* about us */
+  .about-us h2 {
+    font-size: 2rem;
+  }
+
+  .about-container {
+    flex-direction: column;
+  }
+
+  .about-text p {
+    font-size: 1rem;
+    text-align: center;
   }
 }
