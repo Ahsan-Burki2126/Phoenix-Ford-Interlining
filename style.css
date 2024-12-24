@@ -656,7 +656,7 @@ button.submit-btn:hover {
     justify-content: space-between;
   }
   .logo-text {
-    display: none;
+    font-size: 12px;
   }
   .nav-links {
     display: none;
